@@ -76,9 +76,9 @@
             flex-direction: column; /* Disposition en colonne */
             align-items: center; /* Centre les catégories horizontalement */
         }
-        
+
         .category {
-            width: 80%; /* Largeur des catégories */
+            width: 45vw; /* Largeur des catégories en fonction de la taille de l'écran */
             max-width: 400px; /* Largeur maximale des catégories */
             height: 200px; /* Hauteur fixe des catégories */
             margin: 20px 0; /* Marge verticale autour de chaque catégorie */
@@ -93,14 +93,18 @@
         }
         
         .category img {
-            width: 130px; /* Largeur fixe de l'image */
-            height: 130px; /* Hauteur fixe de l'image */
+            width: 40vw; /* Largeur de l'image en fonction de la taille de l'écran */
+            height: auto; /* Hauteur automatique pour conserver le rapport hauteur/largeur */
             object-fit: contain; /* Ajuste l'image pour être entièrement visible */
         }
         
+        .category h2,
+        .category p {
+            font-size: 2vw; /* Taille du texte en fonction de la taille de l'écran */
+        }
+        
         .category:hover {
-            width: 90%; /* Agrandit la catégorie au survol */
-            max-width: 450px; /* Largeur maximale au survol */
+            width: 50vw; /* Agrandit la catégorie au survol en fonction de la taille de l'écran */
             height: auto; /* Agrandit la catégorie en fonction de son contenu */
         }
         .category:not(:last-child) {

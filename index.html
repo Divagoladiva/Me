@@ -37,7 +37,10 @@
             flex-direction: column;
             align-items: center;
             animation: fadeIn 2s ease-in-out;
-            overflow: hidden; /* Ensure the background covers the entire viewport */
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+            position: relative;
+            z-index: 0;
         }
 
         .animated-background {
@@ -46,7 +49,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(270deg, #FF7E5F, #FEB47B, #86A8E7, #91EAE4);
+            background: linear-gradient(270deg, #2c2c2c, #4c4c4c, #6c6c6c, #8c8c8c, #acacac);
             background-size: 800% 800%;
             animation: gradientBackground 15s ease infinite;
             z-index: -1;
@@ -99,13 +102,13 @@
             flex-direction: column;
             align-items: center;
         }
-        
+
         .category {
             width: 80%;
             max-width: 400px;
             height: 200px;
             margin: 20px 0;
-            background-color: #1E1E1E;
+            background-color: rgba(30, 30, 30, 0.9); /* Darker background with opacity */
             border-radius: 8px;
             overflow: hidden;
             display: flex;
@@ -114,13 +117,13 @@
             justify-content: center;
             transition: all 0.3s;
         }
-        
+
         .category img {
             width: 130px;
             height: 130px;
             object-fit: contain;
         }
-        
+
         .category:hover {
             width: 90%;
             max-width: 450px;
@@ -203,6 +206,11 @@
                 margin: 20px auto;
             }
         }
+
+        /* Extra space for scrolling */
+        .spacer {
+            height: 200px;
+        }
     </style>
 </head>
 <body>
@@ -215,7 +223,7 @@
         <span>g</span>
         <span>o</span>
     </h1>
-     <div class="container">
+    <div class="container">
         <div class="category youtube">
             <img src="image/youtube.png" alt="Image YouTube">
             <div>
@@ -249,6 +257,6 @@
             </div>
         </div>
     </div>
+    <div class="spacer"></div> <!-- Add this to create extra space for scrolling -->
 </body>
 </html>
-

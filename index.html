@@ -127,21 +127,23 @@
             width: 130px;
             height: 130px;
             object-fit: contain;
+            transition: all 0.3s; /* Ajout de transition pour l'image */
         }
 
         .category:hover {
-            width: calc(90% - 20px); /* Largeur agrandie au survol */
-            max-width: calc(90% * 3 - 20px); /* Limite la largeur maximale en fonction de l'écran */
+            width: calc(100% - 20px); /* Largeur agrandie au survol */
+            max-width: calc(100% - 20px); /* Taille maximale agrandie */
             height: auto; /* Hauteur ajustée */
             margin: 5px; /* Espacement réduit au survol */
         }
 
-        .category:not(:last-child) {
-            margin-right: 0; /* Supprime la marge droite pour le dernier élément de chaque ligne */
+        .category:hover img {
+            transform: scale(1.3); /* Agrandissement de l'image */
         }
 
-        .category:hover img {
-            transform: scale(1.1);
+        .category:hover div {
+            max-height: 300px; /* Hauteur maximale pour le texte */
+            opacity: 1;
         }
 
         .category div {
@@ -157,15 +159,6 @@
             max-height: 50px;
             overflow: hidden;
             transition: max-height 0.3s;
-        }
-
-        .category:hover div {
-            max-height: 200px;
-            opacity: 1;
-        }
-
-        .category:hover div p {
-            max-height: 100%;
         }
 
         .category h2,
@@ -216,7 +209,7 @@
             height: 200px;
         }
 
-        @media screen and (max-width : 600px) {
+        @media screen and (max-width: 600px) {
         .category {
             width: calc(80% - 20px); /* Réduire la largeur des catégories sur les petits écrans */
             max-width: none; /* Réinitialiser la largeur maximale */

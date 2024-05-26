@@ -109,10 +109,10 @@
 
         .category {
             width: calc(33.33% - 20px); /* Calcule la largeur pour afficher 3 éléments par ligne */
-            max-width: 500px;
+            max-width: 400px;
             height: 200px;
-            margin: 20px;
-            background-color: rgba(20, 20, 20, 0.7); /* Darker background with opacity */
+            margin: 10px; /* Espacement entre les catégories */
+            background-color: rgba(20, 20, 20, 0.9); /* Darker background with opacity */
             border-radius: 8px;
             overflow: hidden;
             display: flex;
@@ -129,9 +129,10 @@
         }
 
         .category:hover {
-            width: 90%;
+            width: 90%; /* Largeur agrandie au survol */
             max-width: 450px;
-            height: auto;
+            height: auto; /* Hauteur ajustée */
+            margin: 5px; /* Espacement réduit au survol */
         }
 
         .category:not(:last-child) {

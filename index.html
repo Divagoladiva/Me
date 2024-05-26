@@ -130,8 +130,8 @@
         }
 
         .category:hover {
-            width: 90%; /* Largeur agrandie au survol */
-            max-width: 450px;
+            width: calc(90% - 20px); /* Largeur agrandie au survol */
+            max-width: calc(90% * 3 - 20px); /* Limite la largeur maximale en fonction de l'écran */
             height: auto; /* Hauteur ajustée */
             margin: 5px; /* Espacement réduit au survol */
         }
@@ -215,6 +215,17 @@
         .spacer {
             height: 200px;
         }
+
+        @media screen and (max-width : 600px) {
+        .category {
+            width: calc(80% - 20px); /* Réduire la largeur des catégories sur les petits écrans */
+            max-width: none; /* Réinitialiser la largeur maximale */
+        }
+        .category:hover {
+                width: calc(80% - 20px); /* Réduire la largeur au survol sur les petits écrans */
+                max-width: none; /* Réinitialiser la largeur maximale */
+            }
+        }
     </style>
 </head>
 <body>
@@ -250,7 +261,7 @@
                 <h2>Mon profil Fiverr</h2>
                 <p>Découvrez mes services sur Fiverr et commandez des travaux de qualité.</p>
                 <a href="https://fr.fiverr.com/divagoladiva">Voir plus</a>
-                        </div>
+            </div>
         </div>
         <div class="category itch">
             <img src="image/itch.png" alt="Image Itch">
@@ -268,9 +279,6 @@
                 <a href="https://discord.gg/2jMCbG9mD9" target="_blank">Rejoignez mon Discord</a>
             </div>
         </div>
-    </div>
-</body>
-</html>
     </div>
 </body>
 </html>

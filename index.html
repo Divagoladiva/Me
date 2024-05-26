@@ -113,6 +113,12 @@
             max-width: 800px; /* Largeur maximale des catégories au survol */
             height: auto; /* Agrandit la catégorie en fonction de son contenu */
         }
+        
+        @media screen and (max-width: 600px) {
+            .category {
+                width: 90vw; /* Largeur des catégories pour les petits écrans */
+            }
+        }
         .category:not(:last-child) {
             margin-bottom: 20px; /* Ajoute de l'espace entre les catégories */
         }

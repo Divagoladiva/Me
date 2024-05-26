@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divago</title>
     <style>
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        @keyframes wave {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
         }
 
         @keyframes pulse {
@@ -30,7 +31,7 @@
         h1 {
             font-size: 3em;
             margin: 20px 0;
-            animation: pulse 2s infinite;
+            animation: wave 2s infinite;
         }
 
         .container {
@@ -46,6 +47,11 @@
             background-color: #1E1E1E;
             padding: 20px;
             border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .category:hover {
+            background-color: #2E2E2E;
         }
 
         .category img {
@@ -53,6 +59,15 @@
             max-height: 150px;
             margin-right: 20px;
             border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .category div {
+            display: none;
+        }
+
+        .category:hover div {
+            display: block;
         }
 
         .category div {
@@ -99,7 +114,9 @@
     <h1>Divago</h1>
     <div class="container">
         <div class="category youtube">
-            <img src="image/youtube.png" alt="Image YouTube">
+            <a href="https://www.youtube.com/channel/UCZdHI7On-Qw-ZwcMF-h-9DQ" target="_blank">
+                <img src="image/youtube.png" alt="Image YouTube">
+            </a>
             <div>
                 <h2>Ma chaine YouTube</h2>
                 <p>Découvrez mes vidéos et abonnez-vous à ma chaîne YouTube pour ne rien manquer.</p>
@@ -107,7 +124,9 @@
             </div>
         </div>
         <div class="category twitch">
-            <img src="image/twitch.png" alt="Image Twitch">
+            <a href="https://www.twitch.tv/divagoladiva" target="_blank">
+                <img src="image/twitch.png" alt="Image Twitch">
+            </a>
             <div>
                 <h2>Ma chaine Twitch</h2>
                 <p>Rejoignez-moi en direct sur Twitch pour des sessions de streaming interactives.</p>
@@ -115,7 +134,9 @@
             </div>
         </div>
         <div class="category itch">
-            <img src="image/itch.png" alt="Image Itch">
+            <a href="https://divag.itch.io/" target="_blank">
+                <img src="image/itch.png" alt="Image Itch">
+            </a>
             <div>
                 <h2>Mon Itch</h2>
                 <p>Découvrez mes jeux et projets sur ma page Itch.io.</p>
@@ -123,7 +144,9 @@
             </div>
         </div>
         <div class="category discord">
-            <img src="image/discord.png" alt="Image Discord">
+            <a href="https://discord.gg/2jMCbG9mD9" target="_blank">
+                <img src="image/discord.png" alt="Image Discord">
+            </a>
             <div>
                 <h2>Mon Discord</h2>
                 <p>Rejoignez notre communauté sur Discord pour discuter et partager.</p>

@@ -78,7 +78,8 @@
         }
         
         .category {
-            width: 200px; /* Largeur fixe des catégories */
+            width: 80%; /* Largeur des catégories */
+            max-width: 400px; /* Largeur maximale des catégories */
             height: 200px; /* Hauteur fixe des catégories */
             margin: 20px 0; /* Marge verticale autour de chaque catégorie */
             background-color: #1E1E1E;
@@ -87,25 +88,23 @@
             display: flex; /* Utilise le modèle de boîte flexible */
             flex-direction: column; /* Disposition en colonne */
             align-items: center; /* Centre le contenu horizontalement */
-            justify-content: flex-start; /* Aligne le contenu en haut */
+            justify-content: center; /* Centre le contenu verticalement */
             transition: all 0.3s; /* Animation de transition pour agrandir */
         }
         
         .category img {
-            margin-top: 10px; /* Marge en haut pour centrer verticalement */
             width: 130px; /* Largeur fixe de l'image */
             height: 130px; /* Hauteur fixe de l'image */
             object-fit: contain; /* Ajuste l'image pour être entièrement visible */
         }
-
-        .category:not(:last-child) {
-            margin-bottom: 20px; /* Ajoute de l'espace entre les catégories */
-        }
-
         
         .category:hover {
-            width: 250px; /* Agrandit la catégorie au survol */
+            width: 90%; /* Agrandit la catégorie au survol */
+            max-width: 450px; /* Largeur maximale au survol */
             height: auto; /* Agrandit la catégorie en fonction de son contenu */
+        }
+        .category:not(:last-child) {
+            margin-bottom: 20px; /* Ajoute de l'espace entre les catégories */
         }
 
         .category:hover img {

@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divago</title>
     <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         @keyframes wave {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0); }
+            0%, 100% { transform: translateY(0); }
+            25% { transform: translateY(-5px); }
+            50% { transform: translateY(0); }
+            75% { transform: translateY(5px); }
         }
 
         @keyframes pulse {
@@ -31,6 +37,12 @@
         h1 {
             font-size: 3em;
             margin: 20px 0;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1 span {
+            display: inline-block;
             animation: wave 2s infinite;
         }
 
@@ -45,9 +57,9 @@
             align-items: center;
             margin: 20px 0;
             background-color: #1E1E1E;
-            padding: 20px;
             border-radius: 8px;
-            transition: background-color 0.3s;
+            overflow: hidden;
+            transition: all 0.3s;
         }
 
         .category:hover {
@@ -60,28 +72,38 @@
             margin-right: 20px;
             border-radius: 8px;
             cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .category:hover img {
+            transform: scale(1.1);
         }
 
         .category div {
-            display: none;
+            padding: 20px;
+            overflow: hidden;
+            transition: max-height 0.3s;
+            max-height: 0;
         }
 
         .category:hover div {
-            display: block;
-        }
-
-        .category div {
-            flex-grow: 1;
+            max-height: 200px; /* Changez la valeur selon vos besoins */
         }
 
         .category h2 {
             margin: 0 0 10px 0;
             font-size: 2em;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
 
         .category p {
-            margin: 0 0 10px 0;
+            margin: 0;
             font-size: 1.2em;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
 
         .youtube a {
@@ -111,7 +133,7 @@
     </style>
 </head>
 <body>
-    <h1>Divago</h1>
+    <h1><span>D</span>ivago</h1>
     <div class="container">
         <div class="category youtube">
             <a href="https://www.youtube.com/channel/UCZdHI7On-Qw-ZwcMF-h-9DQ" target="_blank">

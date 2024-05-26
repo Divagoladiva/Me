@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divago</title>
     <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
         body {
             background-color: #121212;
             color: #E0E0E0;
@@ -14,16 +24,21 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            animation: fadeIn 2s ease-in-out;
         }
+
         h1 {
             font-size: 3em;
             margin: 20px 0;
+            animation: pulse 2s infinite;
         }
+
         .container {
             width: 80%;
             max-width: 1200px;
             margin: 20px 0;
         }
+
         .category {
             display: flex;
             align-items: center;
@@ -32,28 +47,49 @@
             padding: 20px;
             border-radius: 8px;
         }
+
         .category img {
             max-width: 150px;
             max-height: 150px;
             margin-right: 20px;
             border-radius: 8px;
         }
+
         .category div {
             flex-grow: 1;
         }
+
         .category h2 {
             margin: 0 0 10px 0;
             font-size: 2em;
         }
+
         .category p {
             margin: 0 0 10px 0;
             font-size: 1.2em;
         }
-        .category a {
+
+        .youtube a {
+            color: #FF0000;
+        }
+
+        .twitch a {
+            color: #9146FF;
+        }
+
+        .itch a {
             color: #1DB954;
+        }
+
+        .discord a {
+            color: #7289DA;
+        }
+
+        .category a {
             text-decoration: none;
             font-weight: bold;
         }
+
         .category a:hover {
             text-decoration: underline;
         }
@@ -62,7 +98,7 @@
 <body>
     <h1>Divago</h1>
     <div class="container">
-        <div class="category">
+        <div class="category youtube">
             <img src="votre_image_youtube.jpg" alt="Image YouTube">
             <div>
                 <h2>Ma chaine YouTube</h2>
@@ -70,7 +106,7 @@
                 <a href="https://www.youtube.com/votre_chaine" target="_blank">Visitez ma chaîne YouTube</a>
             </div>
         </div>
-        <div class="category">
+        <div class="category twitch">
             <img src="votre_image_twitch.jpg" alt="Image Twitch">
             <div>
                 <h2>Ma chaine Twitch</h2>
@@ -78,12 +114,20 @@
                 <a href="https://www.twitch.tv/votre_chaine" target="_blank">Visitez ma chaîne Twitch</a>
             </div>
         </div>
-        <div class="category">
+        <div class="category itch">
             <img src="votre_image_itch.jpg" alt="Image Itch">
             <div>
                 <h2>Mon Itch</h2>
                 <p>Découvrez mes jeux et projets sur ma page Itch.io.</p>
                 <a href="https://votre_itch.io" target="_blank">Visitez ma page Itch.io</a>
+            </div>
+        </div>
+        <div class="category discord">
+            <img src="votre_image_discord.jpg" alt="Image Discord">
+            <div>
+                <h2>Mon Discord</h2>
+                <p>Rejoignez notre communauté sur Discord pour discuter et partager.</p>
+                <a href="https://discord.gg/votre_invitation" target="_blank">Rejoignez mon Discord</a>
             </div>
         </div>
     </div>

@@ -73,8 +73,8 @@
             max-width: 1200px;
             margin: 20px auto; /* Centre le conteneur horizontalement */
             display: flex; /* Affiche les catégories en colonne */
-            flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
-            justify-content: center; /* Centre horizontalement les catégories */
+            flex-direction: column; /* Disposition en colonne */
+            align-items: center; /* Centre les catégories horizontalement */
         }
         
         .category {
@@ -91,12 +91,17 @@
             transition: all 0.3s; /* Animation de transition pour agrandir */
         }
         
-       .category img {
+        .category img {
             margin-top: 10px; /* Marge en haut pour centrer verticalement */
-            width: 150px; /* Largeur fixe de l'image */
-            height: 150px; /* Hauteur fixe de l'image */
-            object-fit: cover; /* Remplit l'image sans déformer */
+            width: 130px; /* Largeur fixe de l'image */
+            height: 130px; /* Hauteur fixe de l'image */
+            object-fit: contain; /* Ajuste l'image pour être entièrement visible */
         }
+
+        .category:not(:last-child) {
+            margin-bottom: 20px; /* Ajoute de l'espace entre les catégories */
+        }
+
         
         .category:hover {
             width: 250px; /* Agrandit la catégorie au survol */

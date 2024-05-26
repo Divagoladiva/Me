@@ -110,7 +110,7 @@
         .category {
             width: calc(33.33% - 20px); /* Calcule la largeur pour afficher 3 éléments par ligne */
             max-width: 300px;
-            min-width: 200px; /* Taille minimale pour les grands écrans */
+            min-width: 300px; /* Taille de base pour les grands écrans */
             height: 200px;
             margin: 10px; /* Espacement entre les catégories */
             background-color: rgba(20, 20, 20, 0.9); /* Darker background with opacity */
@@ -122,10 +122,10 @@
             justify-content: center;
             transition: all 0.3s;
         }
-
-        @media screen and (max-width: 2000px) {
+        
+        @media screen and (max-width: 600px) {
             .category {
-                min-width: 100px; /* Taille minimale pour les petits écrans */
+                min-width: 200px; /* Taille de base pour les petits écrans */
             }
         }
 

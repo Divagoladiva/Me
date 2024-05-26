@@ -71,23 +71,27 @@
         .container {
             width: 80%;
             max-width: 1200px;
-            margin: 20px 0;
+            margin: 20px auto; /* Centre le conteneur horizontalement */
+            display: flex; /* Affiche les catégories en colonne */
+            flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+            justify-content: center; /* Centre horizontalement les catégories */
         }
-
+        
         .category {
-            display: inline-block; /* Les catégories sont affichées en ligne */
-            vertical-align: top; /* Alignement vertical en haut */
-            margin: 20px;
+            width: 200px; /* Largeur fixe des catégories */
+            height: 200px; /* Hauteur fixe des catégories */
+            margin: 20px; /* Marge autour de chaque catégorie */
             background-color: #1E1E1E;
-            padding: 20px;
             border-radius: 8px;
-            border-left: 5px solid transparent; /* Bordure gauche transparente */
-            transition: border-left-color 0.3s; /* Animation de transition pour la couleur de la bordure */
+            overflow: hidden; /* Cache le texte débordant */
+            transition: all 0.3s; /* Animation de transition pour agrandir */
+        }
+        
+        .category:hover {
+            width: 250px; /* Agrandit la catégorie au survol */
+            height: auto; /* Agrandit la catégorie en fonction de son contenu */
         }
 
-        .category:hover {
-            border-left-color: #7289DA; /* Couleur de la bordure lors du survol */
-        }
 
 
         .category img {

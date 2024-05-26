@@ -75,20 +75,20 @@
         }
 
         .category {
-            display: flex;
-            align-items: center;
-            margin: 20px 0;
+            display: inline-block; /* Les catégories sont affichées en ligne */
+            vertical-align: top; /* Alignement vertical en haut */
+            margin: 20px;
             background-color: #1E1E1E;
             padding: 20px;
             border-radius: 8px;
-            overflow: hidden;
-            transition: all 0.3s;
-            min-height: 150px;
+            border-left: 5px solid transparent; /* Bordure gauche transparente */
+            transition: border-left-color 0.3s; /* Animation de transition pour la couleur de la bordure */
         }
 
         .category:hover {
-            background-color: #2E2E2E;
+            border-left-color: #7289DA; /* Couleur de la bordure lors du survol */
         }
+
 
         .category img {
             max-width: 150px;

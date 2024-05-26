@@ -17,16 +17,39 @@
             75% { transform: translateY(5px); }
         }
 
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
         body {
-            background-color: #121212;
-            color: #E0E0E0;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             animation: fadeIn 2s ease-in-out;
+            overflow: hidden; /* Ensure the background covers the entire viewport */
+        }
+
+        .animated-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(270deg, #FF7E5F, #FEB47B, #86A8E7, #91EAE4);
+            background-size: 800% 800%;
+            animation: gradientBackground 15s ease infinite;
+            z-index: -1;
         }
 
         h1 {
@@ -71,40 +94,41 @@
         .container {
             width: 80%;
             max-width: 1200px;
-            margin: 20px auto; /* Centre le conteneur horizontalement */
-            display: flex; /* Affiche les catégories en colonne */
-            flex-direction: column; /* Disposition en colonne */
-            align-items: center; /* Centre les catégories horizontalement */
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .category {
-            width: 80%; /* Largeur des catégories */
-            max-width: 400px; /* Largeur maximale des catégories */
-            height: 200px; /* Hauteur fixe des catégories */
-            margin: 20px 0; /* Marge verticale autour de chaque catégorie */
+            width: 80%;
+            max-width: 400px;
+            height: 200px;
+            margin: 20px 0;
             background-color: #1E1E1E;
             border-radius: 8px;
-            overflow: hidden; /* Cache le texte débordant */
-            display: flex; /* Utilise le modèle de boîte flexible */
-            flex-direction: column; /* Disposition en colonne */
-            align-items: center; /* Centre le contenu horizontalement */
-            justify-content: center; /* Centre le contenu verticalement */
-            transition: all 0.3s; /* Animation de transition pour agrandir */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
         }
         
         .category img {
-            width: 130px; /* Largeur fixe de l'image */
-            height: 130px; /* Hauteur fixe de l'image */
-            object-fit: contain; /* Ajuste l'image pour être entièrement visible */
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
         }
         
         .category:hover {
-            width: 90%; /* Agrandit la catégorie au survol */
-            max-width: 450px; /* Largeur maximale au survol */
-            height: auto; /* Agrandit la catégorie en fonction de son contenu */
+            width: 90%;
+            max-width: 450px;
+            height: auto;
         }
+
         .category:not(:last-child) {
-            margin-bottom: 20px; /* Ajoute de l'espace entre les catégories */
+            margin-bottom: 20px;
         }
 
         .category:hover img {
@@ -120,18 +144,19 @@
         }
 
         .category div p {
-            margin: 0; /* Supprime la marge par défaut du paragraphe */
-            max-height: 50px; /* Hauteur maximale du paragraphe à afficher */
-            overflow: hidden; /* Cache tout texte dépassant la hauteur maximale */
-            transition: max-height 0.3s; /* Animation pour une transition en douceur */
+            margin: 0;
+            max-height: 50px;
+            overflow: hidden;
+            transition: max-height 0.3s;
         }
 
         .category:hover div {
-            max-height: 200px; /* Changez la valeur selon vos besoins */
+            max-height: 200px;
             opacity: 1;
         }
+
         .category:hover div p {
-            max-height: 100%; /* Affiche tout le texte lorsque survolé */
+            max-height: 100%;
         }
 
         .category h2,
@@ -173,7 +198,6 @@
             text-decoration: underline;
         }
 
-        /* Pour les téléphones */
         @media screen and (max-width: 600px) {
             .category {
                 margin: 20px auto;
@@ -182,6 +206,7 @@
     </style>
 </head>
 <body>
+    <div class="animated-background"></div>
     <h1>
         <span>D</span>
         <span>i</span>
@@ -226,3 +251,4 @@
     </div>
 </body>
 </html>
+

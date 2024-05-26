@@ -3,93 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Je suis Divago</title>
+    <title>Divago</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #E0E0E0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            text-align: center;
-            margin: 10px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
+        h1 {
+            font-size: 3em;
+            margin: 20px 0;
         }
         .container {
             width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .section {
-            background: #fff;
-            padding: 20px;
+            max-width: 1200px;
             margin: 20px 0;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .section h2 {
-            text-align: center;
-            color: #333;
+        .category {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            background-color: #1E1E1E;
+            padding: 20px;
+            border-radius: 8px;
         }
-        .gallery img {
-            width: 30%;
-            margin: 1.66%;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        .category img {
+            max-width: 150px;
+            max-height: 150px;
+            margin-right: 20px;
+            border-radius: 8px;
         }
-        .video-container {
-            text-align: center;
+        .category div {
+            flex-grow: 1;
         }
-        .video-container iframe {
-            width: 80%;
-            height: 400px;
+        .category h2 {
+            margin: 0 0 10px 0;
+            font-size: 2em;
         }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #333;
-            color: #fff;
+        .category p {
+            margin: 0 0 10px 0;
+            font-size: 1.2em;
+        }
+        .category a {
+            color: #1DB954;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .category a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Bienvenue chez moi</h1>
-    </header>
-    <nav>
-        <a href="#Moi">Qui suis-je?</a>
-        <a href="#vidéos">Mes Vidéos</a>
-    </nav>
+    <h1>Divago</h1>
     <div class="container">
-        <section id="qui-je-suis" class="section">
-            <h2>Qui suis-je?</h2>
-            <div class="gallery">
-                <img src="main/Moi1.jpg" alt="Création Artistique 1">
-                <img src="main/to/your/Moi2.jpg" alt="Création Artistique 2">
-                <!-- Ajoute plus d'images ici -->
+        <div class="category">
+            <img src="votre_image_youtube.jpg" alt="Image YouTube">
+            <div>
+                <h2>Ma chaine YouTube</h2>
+                <p>Découvrez mes vidéos et abonnez-vous à ma chaîne YouTube pour ne rien manquer.</p>
+                <a href="https://www.youtube.com/votre_chaine" target="_blank">Visitez ma chaîne YouTube</a>
             </div>
-        </section>
-        <section id="montages-videos" class="section">
-            <h2>Mes Montages Vidéos</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/watch?v=UABQNbXrBzc" frameborder="0" allowfullscreen></iframe>
-                <!-- Remplace "ton_id_de_video" par l'ID de ta vidéo YouTube -->
-                <p><a href="https://www.youtube.com/channel/UCZdHI7On-Qw-ZwcMF-h-9DQ">Regardez plus de vidéos sur ma chaîne YouTube</a></p>
-                <!-- Remplace "ton_id_de_chaine" par l'URL de ta chaîne YouTube -->
+        </div>
+        <div class="category">
+            <img src="votre_image_twitch.jpg" alt="Image Twitch">
+            <div>
+                <h2>Ma chaine Twitch</h2>
+                <p>Rejoignez-moi en direct sur Twitch pour des sessions de streaming interactives.</p>
+                <a href="https://www.twitch.tv/votre_chaine" target="_blank">Visitez ma chaîne Twitch</a>
             </div>
-        </section>
+        </div>
+        <div class="category">
+            <img src="votre_image_itch.jpg" alt="Image Itch">
+            <div>
+                <h2>Mon Itch</h2>
+                <p>Découvrez mes jeux et projets sur ma page Itch.io.</p>
+                <a href="https://votre_itch.io" target="_blank">Visitez ma page Itch.io</a>
+            </div>
+        </div>
     </div>
-    <footer>
-        <p>&copy; 2024 Divago.INC Tous droits réservés.</p>
-    </footer>
 </body>
 </html>

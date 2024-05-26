@@ -80,20 +80,19 @@
         .category {
             width: 200px; /* Largeur fixe des catégories */
             height: 200px; /* Hauteur fixe des catégories */
-            margin: 20px; /* Marge autour de chaque catégorie */
+            margin: 20px 0; /* Marge verticale autour de chaque catégorie */
             background-color: #1E1E1E;
             border-radius: 8px;
             overflow: hidden; /* Cache le texte débordant */
+            display: flex; /* Utilise le modèle de boîte flexible */
+            flex-direction: column; /* Disposition en colonne */
+            align-items: center; /* Centre le contenu horizontalement */
+            justify-content: flex-start; /* Aligne le contenu en haut */
             transition: all 0.3s; /* Animation de transition pour agrandir */
         }
         
         .category img {
-            max-width: 150px;
-            max-height: 150px;
-            margin-right: 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.3s;
+            margin-top: 10px; /* Marge en haut pour centrer verticalement */
         }
         
         .category:hover {

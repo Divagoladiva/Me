@@ -6,7 +6,7 @@
     <title>Divago</title>
     <style>
         @keyframes fadeIn {
-            from { opacity: 0; }
+            from { opacity: 0; background-color: #000; }
             to { opacity: 1; }
         }
 
@@ -23,6 +23,15 @@
             }
             100% {
                 background-position: 200% 200%;
+            }
+        }
+
+        @keyframes moveCheckerboard {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 100%;
             }
         }
 
@@ -50,7 +59,24 @@
             background: linear-gradient(45deg, #1a1a1a, #2a2a2a, #3a3a3a, #4a4a4a, #5a5a5a, #4a4a4a, #3a3a3a, #2a2a2a, #1a1a1a);
             background-size: 200% 200%;
             animation: gradientBackground 5s linear infinite;
+            z-index: -2;
+        }
+
+        .checkerboard {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #1a1a1a 25%, transparent 25%), 
+                        linear-gradient(-45deg, #1a1a1a 25%, transparent 25%), 
+                        linear-gradient(45deg, transparent 75%, #1a1a1a 75%), 
+                        linear-gradient(-45deg, transparent 75%, #1a1a1a 75%);
+            background-size: 50px 50px;
+            background-position: 0 0, 0 25px, 25px -25px, -25px 0px;
+            animation: moveCheckerboard 30s linear infinite;
             z-index: -1;
+            opacity: 0.1; /* Adjust the opacity to make the checkerboard subtle */
         }
 
         h1 {
@@ -213,6 +239,7 @@
 </head>
 <body>
     <div class="animated-background"></div>
+    <div class="checkerboard"></div>
     <h1>
         <span>D</span>
         <span>i</span>

@@ -111,9 +111,19 @@
             opacity: 0;
         }
 
+        .category div p {
+            margin: 0; /* Supprime la marge par défaut du paragraphe */
+            max-height: -50px; /* Hauteur maximale du paragraphe à afficher */
+            overflow: hidden; /* Cache tout texte dépassant la hauteur maximale */
+            transition: max-height 0.3s; /* Animation pour une transition en douceur */
+        }
+
         .category:hover div {
-            max-height: 200px; /* Changez la valeur selon vos besoins */
+            max-height: -200px; /* Changez la valeur selon vos besoins */
             opacity: 1;
+        }
+        .category:hover div p {
+            max-height: 100%; /* Affiche tout le texte lorsque survolé */
         }
 
         .category h2,

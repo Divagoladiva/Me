@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Personnelle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .section {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            text-align: center;
+            color: #333;
+        }
+        .gallery img {
+            width: 30%;
+            margin: 1.66%;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .video-container {
+            text-align: center;
+        }
+        .video-container iframe {
+            width: 80%;
+            height: 400px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur ma page personnelle</h1>
+    </header>
+    <nav>
+        <a href="#creations-artistiques">Créations Artistiques</a>
+        <a href="#montages-videos">Montages Vidéos</a>
+    </nav>
+    <div class="container">
+        <section id="creations-artistiques" class="section">
+            <h2>Mes Créations Artistiques</h2>
+            <div class="gallery">
+                <img src="path/to/your/image1.jpg" alt="Création Artistique 1">
+                <img src="path/to/your/image2.jpg" alt="Création Artistique 2">
+                <img src="path/to/your/image3.jpg" alt="Création Artistique 3">
+                <!-- Ajoute plus d'images ici -->
+            </div>
+        </section>
+        <section id="montages-videos" class="section">
+            <h2>Mes Montages Vidéos</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/ton_id_de_video" frameborder="0" allowfullscreen></iframe>
+                <!-- Remplace "ton_id_de_video" par l'ID de ta vidéo YouTube -->
+                <p>Regardez plus de vidéos sur ma chaîne YouTube : <a href="https://www.youtube.com/channel/ton_id_de_chaine" target="_blank">Ma chaîne YouTube</a></p>
+                <!-- Remplace "ton_id_de_chaine" par l'URL de ta chaîne YouTube -->
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Ton Nom. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

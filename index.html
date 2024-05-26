@@ -78,8 +78,8 @@
         }
         
         .category {
-            width: 80vw; /* Largeur des catégories en fonction de la taille de l'écran */
-            max-width: 800px; /* Largeur maximale des catégories */
+            width: 80%; /* Largeur des catégories */
+            max-width: 400px; /* Largeur maximale des catégories */
             height: 200px; /* Hauteur fixe des catégories */
             margin: 20px 0; /* Marge verticale autour de chaque catégorie */
             background-color: #1E1E1E;
@@ -88,36 +88,20 @@
             display: flex; /* Utilise le modèle de boîte flexible */
             flex-direction: column; /* Disposition en colonne */
             align-items: center; /* Centre le contenu horizontalement */
-            justify-content: space-between; /* Espace uniformément le contenu */
+            justify-content: center; /* Centre le contenu verticalement */
             transition: all 0.3s; /* Animation de transition pour agrandir */
         }
         
         .category img {
-            width: 50%; /* Largeur de l'image en pourcentage de la catégorie */
-            max-height: 70%; /* Hauteur maximale de l'image en pourcentage de la catégorie */
+            width: 130px; /* Largeur fixe de l'image */
+            height: 130px; /* Hauteur fixe de l'image */
             object-fit: contain; /* Ajuste l'image pour être entièrement visible */
         }
         
-        .category div {
-            text-align: center; /* Centre le texte horizontalement */
-        }
-        
-        .category h2,
-        .category p,
-        .category a {
-            font-size: 2vw; /* Taille du texte en fonction de la taille de l'écran */
-        }
-        
         .category:hover {
-            width: 90vw; /* Agrandit la catégorie au survol en fonction de la taille de l'écran */
-            max-width: 800px; /* Largeur maximale des catégories au survol */
+            width: 90%; /* Agrandit la catégorie au survol */
+            max-width: 450px; /* Largeur maximale au survol */
             height: auto; /* Agrandit la catégorie en fonction de son contenu */
-        }
-        
-        @media screen and (max-width: 600px) {
-            .category {
-                width: 90vw; /* Largeur des catégories pour les petits écrans */
-            }
         }
         .category:not(:last-child) {
             margin-bottom: 20px; /* Ajoute de l'espace entre les catégories */

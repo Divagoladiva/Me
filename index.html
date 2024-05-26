@@ -83,6 +83,7 @@
             border-radius: 8px;
             overflow: hidden;
             transition: all 0.3s;
+            min-height: 150px;
         }
 
         .category:hover {
@@ -107,16 +108,18 @@
             overflow: hidden;
             transition: max-height 0.3s;
             max-height: 0;
+            opacity: 0;
         }
 
         .category:hover div {
             max-height: 200px; /* Changez la valeur selon vos besoins */
+            opacity: 1;
         }
 
         .category h2,
         .category p,
         .category a {
-            display: none;
+            display: block;
             opacity: 0;
             transition: opacity 0.3s;
         }
@@ -124,7 +127,6 @@
         .category:hover h2,
         .category:hover p,
         .category:hover a {
-            display: block;
             opacity: 1;
         }
 
@@ -151,6 +153,13 @@
 
         .category a:hover {
             text-decoration: underline;
+        }
+
+        /* Pour les téléphones */
+        @media screen and (max-width: 600px) {
+            .category {
+                margin: 20px auto;
+            }
         }
     </style>
 </head>
@@ -196,9 +205,6 @@
                 <a href="https://discord.gg/2jMCbG9mD9" target="_blank">Rejoignez mon Discord</a>
             </div>
         </div>
-    </div>
-</body>
-</html>
     </div>
 </body>
 </html>

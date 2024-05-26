@@ -73,14 +73,14 @@
             max-width: 1200px;
             margin: 20px auto; /* Centre le conteneur horizontalement */
             display: flex; /* Affiche les catégories en colonne */
-            flex-direction: column; /* Disposition en colonne */
-            align-items: center; /* Centre les catégories horizontalement */
+            flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+            justify-content: center; /* Centre horizontalement les catégories */
         }
         
         .category {
             width: 200px; /* Largeur fixe des catégories */
             height: 200px; /* Hauteur fixe des catégories */
-            margin: 20px 0; /* Marge verticale autour de chaque catégorie */
+            margin: 20px; /* Marge autour de chaque catégorie */
             background-color: #1E1E1E;
             border-radius: 8px;
             overflow: hidden; /* Cache le texte débordant */
@@ -88,8 +88,12 @@
         }
         
         .category img {
-            display: block; /* Permet de centrer verticalement */
-            margin: auto; /* Centre l'image horizontalement */
+            max-width: 150px;
+            max-height: 150px;
+            margin-right: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
         }
         
         .category:hover {

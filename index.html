@@ -128,6 +128,17 @@
             object-fit: contain;
         }
 
+        .category:hover {
+            width: 90%; /* Largeur agrandie au survol */
+            max-width: 450px;
+            height: auto; /* Hauteur ajustée */
+            margin: 5px; /* Espacement réduit au survol */
+        }
+
+        .category:not(:last-child) {
+            margin-right: 0; /* Supprime la marge droite pour le dernier élément de chaque ligne */
+        }
+
         .category:hover img {
             transform: scale(1.1);
         }
@@ -197,13 +208,6 @@
 
         .category a:hover {
             text-decoration: underline;
-        }
-
-        @media screen and (max-width: 600px) {
-            .category {
-                width: 80%; /* Affiche les éléments en pleine largeur sur les petits écrans */
-                margin: 20px auto;
-            }
         }
 
         /* Extra space for scrolling */
